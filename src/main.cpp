@@ -1,3 +1,10 @@
+// ███╗   ███╗ █████╗ ██╗  ██╗    ███████╗██████╗  ██╗ █████╗     ██████╗ ███████╗███╗   ███╗ ██████╗
+// ████╗ ████║██╔══██╗╚██╗██╔╝    ╚════██║╚════██╗███║██╔══██╗    ██╔══██╗██╔════╝████╗ ████║██╔═══██╗
+// ██╔████╔██║███████║ ╚███╔╝         ██╔╝ █████╔╝╚██║╚██████║    ██║  ██║█████╗  ██╔████╔██║██║   ██║
+// ██║╚██╔╝██║██╔══██║ ██╔██╗        ██╔╝ ██╔═══╝  ██║ ╚═══██║    ██║  ██║██╔══╝  ██║╚██╔╝██║██║   ██║
+// ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗       ██║  ███████╗ ██║ █████╔╝    ██████╔╝███████╗██║ ╚═╝ ██║╚██████╔╝
+// ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝       ╚═╝  ╚══════╝ ╚═╝ ╚════╝     ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝
+
 #include <Arduino.h>
 // Program to exercise the MD_MAX72XX library
 //
@@ -16,8 +23,9 @@
   }
 #define PRINTS(x) Serial.print(F(x))
 #define PRINTD(x) Serial.println(x, DEC)
-#define PAR LAKLIK(x) \
-            mx.control(MD_MAX72XX::INTENSITY, x)
+#define PAR \
+  LAKLIK(x) \
+  mx.control(MD_MAX72XX::INTENSITY, x)
 #else
 #define PRINT(s, x)
 #define PRINTS(x)
@@ -28,7 +36,7 @@
 // Define the number of devices we have in the chain and the hardware interface
 // NOTE: These pin numbers will probably not work with your hardware and may
 // need to be adapted
-#define HARDWARE_TYPE MD_MAX72XX::FC16_HW
+#define HARDWARE_TYPE MD_MAX72XX::FC16_HW //BU ÖNEMLİ
 #define MAX_DEVICES 4
 
 #define CLK_PIN 13  // or SCK
@@ -207,7 +215,7 @@ void setup()
   Serial.begin(57600);
 #endif
   PRINTS("\n[MD_MAX72XX Test & Demo]");
-  //  scrollText("MD_MAX72xx Test  ");
+  scrollText("MD_MAX72xx Test  ");
 }
 
 void loop()
