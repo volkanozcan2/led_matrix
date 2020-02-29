@@ -5,9 +5,11 @@
 // ██║ ╚═╝ ██║██║  ██║██╔╝ ██╗       ██║  ███████╗ ██║ █████╔╝    ██████╔╝███████╗██║ ╚═╝ ██║╚██████╔╝
 // ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝       ╚═╝  ╚══════╝ ╚═╝ ╚════╝     ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═════╝
 
+// Aşağıdaki kod 4'lü 8x8 Kırmızı Dot Matrix Board için geçerli
+// https://www.robotistan.com/4lu-8x8-kirmizi-dot-matrix-board
+
 #include <Arduino.h>
 // Program to exercise the MD_MAX72XX library
-//
 // Uses most of the functions in the library
 #include <MD_MAX72xx.h>
 //#include <SPI.h>
@@ -23,9 +25,7 @@
   }
 #define PRINTS(x) Serial.print(F(x))
 #define PRINTD(x) Serial.println(x, DEC)
-#define PAR \
-  LAKLIK(x) \
-  mx.control(MD_MAX72XX::INTENSITY, x)
+#define PARLAKLIK(x) mx.control(MD_MAX72XX::INTENSITY, x)
 #else
 #define PRINT(s, x)
 #define PRINTS(x)
